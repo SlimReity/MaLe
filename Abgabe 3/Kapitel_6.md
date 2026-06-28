@@ -14,17 +14,17 @@ Also etwa Tiefe 20. In der Praxis wird es ein bisschen mehr, weil die Bäume sel
 
 ---
 
-### 2. Ist die Gini-Unreinheit eines Knotens im Allgemeinen geringer oder größer als die seines Elternteils? Ist sie im Allgemeinen kleiner/größer oder immer kleiner/größer?
+### 2. Ist die Gini-Unreinheit eines Knotens im Allgemeinen geringer oder grösser als die seines Elternteils? Ist sie im Allgemeinen kleiner/grösser oder immer kleiner/grösser?
 
 Im Allgemeinen ist sie geringer als die des Elternknotens. Der CART-Algorithmus teilt einen Knoten so, dass die gewichtete Summe der Gini-Unreinheiten beider Kindknoten minimal wird, und diese Summe liegt unter der des Elternteils.
 
-Für jeden einzelnen Kindknoten gilt das aber nicht. Durch die Gewichtung mit der Knotengröße kann ein einzelnes Kind durchaus eine höhere Unreinheit haben als das Elternteil, solange das andere Kind das überkompensiert. Garantiert kleiner ist nur die gewichtete Summe der Kinder.
+Für jeden einzelnen Kindknoten gilt das aber nicht. Durch die Gewichtung mit der Knotengrösse kann ein einzelnes Kind durchaus eine höhere Unreinheit haben als das Elternteil, solange das andere Kind das überkompensiert. Garantiert kleiner ist nur die gewichtete Summe der Kinder.
 
 ---
 
 ### 3. Sollte man versuchen, max_depth zu senken, wenn ein Entscheidungsbaum einen Trainingsdatensatz overfittet?
 
-Ja. Overfitting heißt, das Modell ist zu komplex. Senkt man `max_depth`, wird der Baum flacher und einfacher. Das regularisiert ihn und verringert das Overfitting.
+Ja. Overfitting heisst, das Modell ist zu komplex. Senkt man `max_depth`, wird der Baum flacher und einfacher. Das regularisiert ihn und verringert das Overfitting.
 
 ---
 

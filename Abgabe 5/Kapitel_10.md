@@ -1,7 +1,7 @@
 # Abgabe 5 – Kapitel 10: Künstliche neuronale Netze mit Keras
 
 > Theoriefragen und Übungen aus *Hands-On Machine Learning* (Aurélien Géron), Kapitel 10.
-> Die abschließende Programmieraufgabe (MLP auf MNIST mit >98 % Genauigkeit) befindet sich im
+> Die abschliessende Programmieraufgabe (MLP auf MNIST mit >98 % Genauigkeit) befindet sich im
 > Notebook `Kapitel_10.ipynb`.
 
 ---
@@ -36,9 +36,9 @@ Mit nur zwei Neuronen findet das Netz selbst nach vielen Versuchen keine gute L�
 mehr. Das Modell hat zu wenige Parameter und underfittet die Daten systematisch. Die
 Kapazität reicht nicht aus, um die Klassenstruktur abzubilden.
 
-### e) Ausreichend große Netze (8 Neuronen)
+### e) Ausreichend grosse Netze (8 Neuronen)
 Mit acht Neuronen trainiert das Netz durchgängig schnell und bleibt nie stecken. Das
-illustriert eine wichtige Erkenntnis: Große Netze bleiben nur selten in lokalen Minima
+illustriert eine wichtige Erkenntnis: Grosse Netze bleiben nur selten in lokalen Minima
 hängen, und falls doch, sind diese lokalen Optima oft fast so gut wie das globale Optimum.
 Sie können allerdings lange auf Plateaus verweilen.
 
@@ -108,7 +108,7 @@ Wahrheitstabelle zur Kontrolle:
 Das klassische Perzeptron verwendet die Stufenfunktion und gibt nur eine harte
 Klasse aus (0 oder 1), also keine Wahrscheinlichkeiten. Trainiert wird es mit der Perzeptron-Lernregel,
 und es konvergiert nur bei linear separierbaren Daten. Sonst pendelt es ohne
-Garantie. Ein Maß für die Sicherheit einer Vorhersage liefert es ebenfalls nicht.
+Garantie. Ein Mass für die Sicherheit einer Vorhersage liefert es ebenfalls nicht.
 
 Die logistische Regression gibt dagegen für jede Instanz eine Klassenwahrscheinlichkeit
 aus. Sie minimiert eine konvexe Kostenfunktion (Log-Loss / Kreuzentropie) per Gradientenabstieg
@@ -130,7 +130,7 @@ es gibt keine nutzbare Steigung.
 
 Die Sigmoid-Funktion ist dagegen überall glatt und differenzierbar und hat eine
 wohldefinierte, von Null verschiedene Ableitung. So können die Gradienten durch das Netz
-zurückfließen und die Gewichte sinnvoll angepasst werden. Sie ist außerdem nichtlinear,
+zurückfliessen und die Gewichte sinnvoll angepasst werden. Sie ist ausserdem nichtlinear,
 sodass mehrere Schichten überhaupt erst zusätzliche Ausdruckskraft gewinnen.
 
 ---
@@ -147,7 +147,7 @@ Ein Diagramm dieser drei Funktionen entsteht im Notebook `Kapitel_10.ipynb`, Abs
 
 Sei $m$ die Anzahl der Instanzen in einem Batch.
 
-| Größe | Abmessung | Erläuterung |
+| Grösse | Abmessung | Erläuterung |
 |-------|-----------|-------------|
 | Eingabematrix $X$ | $m \times 10$ | eine Zeile pro Instanz, 10 Merkmale |
 | Gewichte $W_h$ (verborgen) | $10 \times 50$ | von 10 Eingaben zu 50 Neuronen |
@@ -169,7 +169,7 @@ Die Bias-Vektoren werden dabei zeilenweise auf jede Instanz addiert (Broadcastin
 | MNIST (10 Ziffern, exklusiv) | 10 | Softmax (Wahrscheinlichkeitsverteilung über die Klassen) |
 | Immobilienpreise (Regression, Kap. 2) | 1 | keine (lineare/identische Aktivierung) |
 
-Bei der Spam-Klassifikation genügt ein Neuron, denn es gibt nur zwei sich gegenseitig ausschließende
+Bei der Spam-Klassifikation genügt ein Neuron, denn es gibt nur zwei sich gegenseitig ausschliessende
 Klassen. MNIST hat 10 exklusive Klassen, daher Softmax. Die Vorhersage eines einzelnen
 Preises ist eine Regression mit einem reellwertigen Ausgang, also ein Neuron ohne
 Aktivierungsfunktion.
@@ -193,13 +193,13 @@ Diese drei Schritte wiederholen sich über viele Epochen.
 Unterschied zu Reverse-Modus-Autodiff: Reverse-Modus-Autodiff ist lediglich die
 Technik, mit der die Gradienten im Rückwärtsdurchlauf effizient berechnet werden.
 Backpropagation ist das vollständige Trainingsverfahren = Reverse-Modus-Autodiff zur
-Gradientenberechnung plus der anschließende Gradientenabstiegsschritt zur
+Gradientenberechnung plus der anschliessende Gradientenabstiegsschritt zur
 Parameteraktualisierung. Autodiff ist also der allgemeinere Baustein, Backpropagation seine
 konkrete Anwendung beim Training von Netzen.
 
 ---
 
-## 9. Hyperparameter eines einfachen MLP und Gegenmaßnahmen bei Overfitting
+## 9. Hyperparameter eines einfachen MLP und Gegenmassnahmen bei Overfitting
 
 Veränderbare Hyperparameter:
 - Anzahl der verborgenen Schichten
@@ -208,7 +208,7 @@ Veränderbare Hyperparameter:
 - Gewichtsinitialisierung
 - Optimierer und dessen Parameter (z. B. Momentum)
 - Lernrate
-- Batch-Größe
+- Batch-Grösse
 - Anzahl der Epochen
 - Regularisierung: L1/L2, Dropout-Rate, Early Stopping
 

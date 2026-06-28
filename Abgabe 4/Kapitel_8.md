@@ -25,7 +25,7 @@ Nachteile:
 
 Der Fluch der Dimensionalität beschreibt, dass sich Daten in hochdimensionalen Räumen völlig anders verhalten als in unserer gewohnten 2- oder 3-dimensionalen Welt.
 
-Mit steigender Dimensionszahl wird der Raum enorm groß, und die Trainingsdaten liegen darin extrem dünn verteilt (spärlich). Zwei zufällig gewählte Punkte sind im Mittel sehr weit voneinander entfernt. Eine neue Instanz liegt deshalb in der Regel weit von allen Trainingsbeispielen entfernt, und Vorhersagen beruhen eher auf Extrapolation als auf Interpolation. Sie werden damit viel unzuverlässiger, und die Modelle neigen stärker zum Overfitting.
+Mit steigender Dimensionszahl wird der Raum enorm gross, und die Trainingsdaten liegen darin extrem dünn verteilt (spärlich). Zwei zufällig gewählte Punkte sind im Mittel sehr weit voneinander entfernt. Eine neue Instanz liegt deshalb in der Regel weit von allen Trainingsbeispielen entfernt, und Vorhersagen beruhen eher auf Extrapolation als auf Interpolation. Sie werden damit viel unzuverlässiger, und die Modelle neigen stärker zum Overfitting.
 
 Um trotz vieler Dimensionen eine vergleichbare Datendichte zu erreichen, bräuchte man eine mit der Dimensionszahl exponentiell wachsende Menge an Trainingsdaten.
 

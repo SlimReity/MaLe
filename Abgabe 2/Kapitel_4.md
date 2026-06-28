@@ -30,7 +30,7 @@ Nein. Die Kostenfunktion der logistischen Regression ist konvex. Eine konvexe Fu
 
 ### 4. Führen alle Algorithmen für das Gradientenverfahren zum gleichen Modell, vorausgesetzt, sie laufen lange genug?
 
-Nein. Ist die Kostenfunktion konvex und die Lernrate nicht zu groß, landen alle Verfahren in der Nähe des globalen Minimums und liefern sehr ähnliche Modelle.
+Nein. Ist die Kostenfunktion konvex und die Lernrate nicht zu gross, landen alle Verfahren in der Nähe des globalen Minimums und liefern sehr ähnliche Modelle.
 
 Aber das stochastische und das Mini-Batch-Gradientenverfahren kommen nie ganz zur Ruhe. Sie schwanken um das Minimum herum, und so bleiben die Modelle leicht unterschiedlich.
 
@@ -48,7 +48,7 @@ Steigt dagegen nur der Validierungsfehler, während der Trainingsfehler weiter s
 
 Nein. Das Mini-Batch-Verfahren (und ebenso das stochastische) ist verrauscht, der Validierungsfehler schwankt von Schritt zu Schritt. Ein kurzzeitiger Anstieg bedeutet nicht, dass man das Optimum überschritten hat.
 
-Besser setzt man das Training fort, speichert regelmäßig das beste Modell und bricht erst dann ab, wenn der Validierungsfehler über längere Zeit nicht mehr besser geworden ist. Am Ende verwendet man das gespeicherte beste Modell.
+Besser setzt man das Training fort, speichert regelmässig das beste Modell und bricht erst dann ab, wenn der Validierungsfehler über längere Zeit nicht mehr besser geworden ist. Am Ende verwendet man das gespeicherte beste Modell.
 
 ---
 
@@ -63,9 +63,9 @@ Besser setzt man das Training fort, speichert regelmäßig das beste Modell und 
 
 ---
 
-### 8. Sie verwenden eine polynomielle Regression, plotten die Lernkurven und bemerken, dass es zwischen dem Trainingsfehler und dem Validierungsfehler einen großen Unterschied gibt. Was passiert? Nennen Sie drei Möglichkeiten, dies zu beheben.
+### 8. Sie verwenden eine polynomielle Regression, plotten die Lernkurven und bemerken, dass es zwischen dem Trainingsfehler und dem Validierungsfehler einen grossen Unterschied gibt. Was passiert? Nennen Sie drei Möglichkeiten, dies zu beheben.
 
-Ein großer Abstand, also niedriger Trainingsfehler bei deutlich höherem Validierungsfehler, bedeutet Overfitting. Das Modell hat eine hohe Varianz.
+Ein grosser Abstand, also niedriger Trainingsfehler bei deutlich höherem Validierungsfehler, bedeutet Overfitting. Das Modell hat eine hohe Varianz.
 
 Drei Möglichkeiten:
 1. Das Modell vereinfachen, z. B. einen niedrigeren Polynomgrad wählen.
@@ -95,11 +95,11 @@ Lasso kann sich unberechenbar verhalten, wenn es mehr Merkmale als Instanzen gib
 
 ---
 
-### 11. Angenommen, Sie möchten Bilder als innen/außen und Tag/Nacht klassifizieren. Sollten Sie zwei Klassifikatoren mit logistischer Regression oder einen Klassifikator mit Softmax-Regression erstellen?
+### 11. Angenommen, Sie möchten Bilder als innen/aussen und Tag/Nacht klassifizieren. Sollten Sie zwei Klassifikatoren mit logistischer Regression oder einen Klassifikator mit Softmax-Regression erstellen?
 
-Zwei logistische Regressionen. Die beiden Eigenschaften „innen/außen“ und „Tag/Nacht“ schließen sich nicht gegenseitig aus, ein Bild kann z. B. außen und nachts sein. Es handelt sich also um zwei voneinander unabhängige binäre Klassifikationen.
+Zwei logistische Regressionen. Die beiden Eigenschaften „innen/aussen“ und „Tag/Nacht“ schliessen sich nicht gegenseitig aus, ein Bild kann z. B. aussen und nachts sein. Es handelt sich also um zwei voneinander unabhängige binäre Klassifikationen.
 
-Die Softmax-Regression passt nur für sich gegenseitig ausschließende Klassen, wenn eine Instanz zu genau einer Klasse gehört. Hier ist das nicht der Fall.
+Die Softmax-Regression passt nur für sich gegenseitig ausschliessende Klassen, wenn eine Instanz zu genau einer Klasse gehört. Hier ist das nicht der Fall.
 
 ---
 

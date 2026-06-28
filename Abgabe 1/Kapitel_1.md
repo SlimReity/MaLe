@@ -38,7 +38,7 @@ Ein Trainingsdatensatz, bei dem das gewünschte Ergebnis komplett mitgeliefert w
 
 1. Clustering: In einer Datenmenge Gruppierungen finden.
 2. Dimensionsreduktion: Zu viele Dimensionen machen es nahezu unmöglich, die Daten schlau zu analysieren. Die Dimensionsreduktion wirkt dem entgegen.
-3. Anomalie-/Ausreißererkennung.
+3. Anomalie-/Ausreissererkennung.
 4. Assoziationsregel-Lernen: Zusammenhänge zwischen Merkmalen aufdecken.
 
 
@@ -76,7 +76,7 @@ Eine Technik für Datensätze, die nicht in den Arbeitsspeicher (RAM) passen. De
 
 ---
 
-### 11. Welche Art Algorithmus beruht auf einem Ähnlichkeitsmaß, um Vorhersagen zu treffen?
+### 11. Welche Art Algorithmus beruht auf einem Ähnlichkeitsmass, um Vorhersagen zu treffen?
 
 Instanzbasiertes Lernen. Das System merkt sich die Trainingsbeispiele und vergleicht neue Instanzen über ein Ähnlichkeitsmass mit ihnen, wie bei k-Nearest-Neighbors.
 
@@ -99,7 +99,7 @@ Sie suchen nach den optimalen Werten der Modellparameter, um das bestmögliche E
 
 1. Zu wenige Trainingsdaten.
 2. Under- bzw. Overfitting.
-3. Daten mit schlechter Qualität (Rauschen, Fehler, Ausreißer).
+3. Daten mit schlechter Qualität (Rauschen, Fehler, Ausreisser).
 4. Nutzlose Features.
 
 
@@ -111,7 +111,7 @@ Das ist Overfitting. Das Modell hat das Rauschen der Trainingsdaten auswendig ge
 
 1. Einfacheres Modell wählen oder das Modell regularisieren.
 2. Mehr Trainingsdaten sammeln.
-3. Rauschen reduzieren, Fehler korrigieren, Ausreißer entfernen.
+3. Rauschen reduzieren, Fehler korrigieren, Ausreisser entfernen.
 
 ---
 

@@ -7,9 +7,9 @@
 
 ## 1. Welches Problem lösen Glorot- und He-Initialisierung?
 
-Sie sollen instabile Gradienten beheben, also die verschwindenden und die explodierenden Gradienten. Sind die Gewichte ungünstig initialisiert, etwa mit zu großer Streuung, dann wächst oder schrumpft das Signal von Schicht zu Schicht. Im Rückwärtsdurchlauf gehen die Gradienten dann entweder gegen null oder sie explodieren.
+Sie sollen instabile Gradienten beheben, also die verschwindenden und die explodierenden Gradienten. Sind die Gewichte ungünstig initialisiert, etwa mit zu grosser Streuung, dann wächst oder schrumpft das Signal von Schicht zu Schicht. Im Rückwärtsdurchlauf gehen die Gradienten dann entweder gegen null oder sie explodieren.
 
-Glorot und He wählen die Streuung der Anfangsgewichte so, dass die Varianz der Ausgaben jeder Schicht etwa der Varianz ihrer Eingaben entspricht und die Gradienten beim Rückwärtsdurchlauf ihre Größe ungefähr behalten. So fließt das Signal stabil durch das Netz, und das Training konvergiert schneller und zuverlässiger. (Faustregel: Glorot für `tanh`/Sigmoid/Softmax, He für ReLU und Varianten.)
+Glorot und He wählen die Streuung der Anfangsgewichte so, dass die Varianz der Ausgaben jeder Schicht etwa der Varianz ihrer Eingaben entspricht und die Gradienten beim Rückwärtsdurchlauf ihre Grösse ungefähr behalten. So fliesst das Signal stabil durch das Netz, und das Training konvergiert schneller und zuverlässiger. (Faustregel: Glorot für `tanh`/Sigmoid/Softmax, He für ReLU und Varianten.)
 
 ---
 
@@ -47,13 +47,13 @@ Wenn die Laufzeit kritisch ist, bleibt ReLU die pragmatische Wahl.
 
 ## 5. Momentum zu nah an 1 (z. B. 0,99999) beim SGD-Optimierer
 
-Bei sehr hohem Momentum klingen die vergangenen Gradienten kaum noch ab, und ihre Beiträge summieren sich über viele Schritte auf. Der Optimierer gewinnt dadurch enorm an „Schwung". In flachen Bereichen beschleunigt er stark, schießt aber über das Minimum hinaus, beginnt zu oszillieren und braucht lange, bis er sich wieder einpendelt. Das Training wird instabil und konvergiert langsamer oder gar nicht. Das Modell überschwingt das Optimum immer wieder, bevor es zur Ruhe kommt.
+Bei sehr hohem Momentum klingen die vergangenen Gradienten kaum noch ab, und ihre Beiträge summieren sich über viele Schritte auf. Der Optimierer gewinnt dadurch enorm an „Schwung". In flachen Bereichen beschleunigt er stark, schiesst aber über das Minimum hinaus, beginnt zu oszillieren und braucht lange, bis er sich wieder einpendelt. Das Training wird instabil und konvergiert langsamer oder gar nicht. Das Modell überschwingt das Optimum immer wieder, bevor es zur Ruhe kommt.
 
 ---
 
 ## 6. Drei Möglichkeiten, ein dünn besetztes Modell zu erzeugen
 
-1. Das Modell normal trainieren und anschließend die winzigen Gewichte auf 0 setzen
+1. Das Modell normal trainieren und anschliessend die winzigen Gewichte auf 0 setzen
    (Pruning / Schwellenwert).
 2. Beim Training ℓ₁-Regularisierung anwenden, die viele Gewichte aktiv gegen 0 drückt.
 3. TensorFlow Model Optimization Toolkit (bzw. ein Verfahren wie das duale Mittelwert-
@@ -85,6 +85,6 @@ Die praktische Aufgabe (Teile a–f) ist im Notebook `Kapitel_11.ipynb` umgesetz
 - c) Batch Normalization ergänzen und die Lernkurven vergleichen.
 - d) Batch Normalization durch SELU ersetzen (selbstnormalisierendes Netz: standardisierte
   Eingaben, LeCun-Initialisierung, nur dichte Schichten).
-- e) Regularisierung mit Alpha-Dropout und anschließend MC-Dropout ohne erneutes
+- e) Regularisierung mit Alpha-Dropout und anschliessend MC-Dropout ohne erneutes
   Training.
 - f) Erneutes Training mit 1cycle-Scheduling.
