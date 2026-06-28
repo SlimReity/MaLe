@@ -156,11 +156,6 @@ Sei $m$ die Anzahl der Instanzen in einem Batch.
 | Bias $b_o$ | Länge $3$ | ein Wert pro Ausgabeneuron |
 | Ausgabematrix $Y$ | $m \times 3$ | eine Zeile pro Instanz, 3 Ausgaben |
 
-Gleichung für die Ausgabe (alle Neuronen mit ReLU):
-
-$$
-Y = \operatorname{ReLU}\!\Big( \operatorname{ReLU}\big( X\,W_h + b_h \big)\, W_o + b_o \Big)
-$$
 
 Die Bias-Vektoren werden dabei zeilenweise auf jede Instanz addiert (Broadcasting).
 
