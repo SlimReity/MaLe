@@ -137,24 +137,9 @@ sodass mehrere Schichten überhaupt erst zusätzliche Ausdruckskraft gewinnen.
 
 ## 5. Drei verbreitete Aktivierungsfunktionen
 
-| Funktion | Formel | Wertebereich | Form |
-|----------|--------|--------------|------|
-| Sigmoid (Logistik) | $\sigma(z)=\dfrac{1}{1+e^{-z}}$ | $(0,\,1)$ | S-förmig, sättigt für große $\lvert z\rvert$ |
-| Tanh | $\tanh(z)=\dfrac{e^{z}-e^{-z}}{e^{z}+e^{-z}}$ | $(-1,\,1)$ | S-förmig, um 0 zentriert |
-| ReLU | $\operatorname{ReLU}(z)=\max(0,\,z)$ | $[0,\,\infty)$ | 0 für $z<0$, danach Gerade mit Steigung 1 |
+Ein Diagramm dieser drei Funktionen entsteht im Notebook `Kapitel_10.ipynb`, Abschnitt
+„Aktivierungsfunktionen". Skizzenhaft:
 
-Ein Diagramm dieser drei Funktionen entsteht im Notebook `Kapitel_10.ipynb` (Abschnitt
-„Aktivierungsfunktionen"). Skizzenhaft:
-
-```
- Sigmoid              Tanh                 ReLU
- 1 ┤      ____        1 ┤      ____         ┤        /
-   │    /              │    /               │      /
-0.5┤   /             0 ┤───/────            │    /
-   │  /                │  /                 │   /
- 0 ┤_/              -1 ┤_/                 0 ┤__/______
-   └───────────        └───────────         └───────────
-```
 
 ---
 
