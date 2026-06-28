@@ -138,7 +138,7 @@ sodass mehrere Schichten überhaupt erst zusätzliche Ausdruckskraft gewinnen.
 ## 5. Drei verbreitete Aktivierungsfunktionen
 
 Ein Diagramm dieser drei Funktionen entsteht im Notebook `Kapitel_10.ipynb`, Abschnitt
-„Aktivierungsfunktionen". Skizzenhaft:
+„Aktivierungsfunktionen".
 
 
 ---
